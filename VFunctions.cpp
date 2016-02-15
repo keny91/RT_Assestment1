@@ -15,17 +15,20 @@ CVFunctions::~CVFunctions()
 {
 }
 
-
+/*
+	SegmentationByTH: takes and image and applies a segmentation th to create a Binary Image 
+*/
 Mat CVFunctions::SegmentationByTH(Mat image, int TH) {
 
 	Mat edges;
-	cvtColor(image, edges, CV_BGR2GRAY);  // Change to gray
-	GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);   // blur (filter_dim, intensity1?,intensity2?)
+	GaussianBlur(image, edges, Size(7, 7), 1.5, 1.5);   // blur (filter_dim, intensity1?,intensity2?)
 	threshold(edges, edges, TH, 255, THRESH_BINARY);
-	return image;
+	return edges;
 }
 
-
+/*
+TakeVideoFrame: takes a frame from a video source
+*/
 Mat CVFunctions::TakeVideoFrame(VideoCapture source) {
 	Mat image;
 	if (!source.isOpened()) {
@@ -36,5 +39,22 @@ Mat CVFunctions::TakeVideoFrame(VideoCapture source) {
 		source >> image;
 		return image;
 	}
+
+}
+
+
+/*
+SegmentObjects: Separate connected elements into different images
+*/
+Mat* CVFunctions::SegmentObjects(Mat Image) {
+
+
+}
+
+
+/*
+ClosingHollowFigures: Separate connected elements into different images
+*/
+Mat ClosingHollowFigures(Mat Image) {
 
 }

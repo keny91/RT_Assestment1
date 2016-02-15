@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+#include "VFunctions.h"
 
 using namespace std;
 using namespace cv;
@@ -12,8 +13,6 @@ using namespace cv;
 class FigureShape
 {
 public:
-
-	string aaaa;
 
 	string ColorLabel;
 	string ColorValue;
@@ -24,5 +23,11 @@ public:
 	FigureShape(string ColorLa, string ColorValue, int NCorners);
 	FigureShape();
 	~FigureShape();
+
+
+
+	void LabelUnknownFigure(Mat image);
+
+
 };
 

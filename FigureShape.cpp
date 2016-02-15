@@ -16,3 +16,8 @@ FigureShape::FigureShape()
 FigureShape::~FigureShape()
 {
 }
+
+
+void FigureShape::LabelUnknownFigure(Mat image) {
+
+}
