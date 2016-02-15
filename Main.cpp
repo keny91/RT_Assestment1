@@ -8,10 +8,11 @@ using namespace cv;
 
 
 int main() {
-	Mat image, edges, ThImage100, ThImage50;          //Create Matrix to store image
+	Mat image, ThImage100, ThImage50;          //Create Matrix to store image
 	VideoCapture cap;          //initialize capture
 	CVFunctions func = CVFunctions();
 	int binaryTH1 = 100;
+	int binaryTH1 = 50;
 
 	cap.open(0);
 	namedWindow("window", 1);          //create window to show image
@@ -19,13 +20,9 @@ int main() {
 	while (1) {
 
 		image = func.TakeVideoFrame(cap);
-		cvtColor(image, edges, CV_BGR2GRAY);  // Change to gray
-		GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);   // blur (filter_dim, intensity1?,intensity2?)
-															//Canny(edges, edges, 0, 30, 3);
-
-
-		threshold(edges, ThImage100, 100, 255, THRESH_BINARY);
-		threshold(edges, ThImage50, 70, 255, THRESH_BINARY);
+		
+		//threshold(edges, ThImage50, 70, 255, THRESH_BINARY);
+		ThImage100 = func.SegmentationByTH(image, binaryTH1);
 		imshow("TH100", ThImage100);
 		imshow("TH50", ThImage50);
 

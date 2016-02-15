@@ -16,8 +16,12 @@ CVFunctions::~CVFunctions()
 }
 
 
-Mat CVFunctions::SegmentationByTH(Mat image) {
+Mat CVFunctions::SegmentationByTH(Mat image, int TH) {
 
+	Mat edges;
+	cvtColor(image, edges, CV_BGR2GRAY);  // Change to gray
+	GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);   // blur (filter_dim, intensity1?,intensity2?)
+	threshold(edges, edges, TH, 255, THRESH_BINARY);
 	return image;
 }
 

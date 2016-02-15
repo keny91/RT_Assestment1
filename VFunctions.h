@@ -15,7 +15,7 @@ public:
 	~CVFunctions();
 
 
-	Mat SegmentationByTH(Mat image);
+	Mat SegmentationByTH(Mat image, int TH);
 	Mat TakeVideoFrame(VideoCapture source);
 
 };

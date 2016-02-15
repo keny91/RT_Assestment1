@@ -18,6 +18,7 @@ public:
 	string ColorLabel;
 	string ColorValue;
 	int NCorners;
+	
 
 	// Constructor
 	FigureShape(string ColorLa, string ColorValue, int NCorners);
