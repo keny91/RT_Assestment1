@@ -22,7 +22,7 @@ Mat CVFunctions::SegmentationByTH(Mat image, int TH) {
 
 	Mat edges;
 	GaussianBlur(image, edges, Size(7, 7), 1.5, 1.5);   // blur (filter_dim, intensity1?,intensity2?)
-	threshold(edges, edges, TH, 255, THRESH_BINARY);
+	threshold(edges, edges, TH, 255, THRESH_BINARY);  // with CV_THRESH_BINARY_INV  we get the inverted sample
 	return edges;
 }
 
@@ -48,7 +48,7 @@ SegmentObjects: Separate connected elements into different images
 */
 Mat* CVFunctions::SegmentObjects(Mat Image) {
 
-
+	return &Image;
 }
 
 
@@ -57,4 +57,6 @@ ClosingHollowFigures: Separate connected elements into different images
 */
 Mat ClosingHollowFigures(Mat Image) {
 
+
+	return Image;
 }

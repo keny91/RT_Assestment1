@@ -18,5 +18,6 @@ public:
 	Mat SegmentationByTH(Mat image, int TH);
 	Mat TakeVideoFrame(VideoCapture source);
 	Mat* SegmentObjects(Mat Image);
+	Mat ClosingHollowFigures(Mat Image);
 };
 

@@ -17,6 +17,9 @@ public:
 	string ColorLabel;
 	string ColorValue;
 	int NCorners;
+	int FigureMaxPixelSize;
+	int FigureMinPixelSize;
+	int FigurPixelSize;
 	
 
 	// Constructor
