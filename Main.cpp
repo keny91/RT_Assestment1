@@ -11,8 +11,8 @@ using namespace std;
 
 
 int main() {
-	Mat image, grayImg , ThImage100, ThImage50;          //Create Matrix to store image
-	Mat BG;
+	Mat image, grayImg, BgSustImg, ThImage100, ThImage50;          //Create Matrix to store image
+	Ptr<BackgroundSubtractorMOG2> bgSust;
 	VideoCapture cap;          //initialize capture
 	CVFunctions func = CVFunctions();
 	int binaryTH1 = 100;
@@ -21,16 +21,22 @@ int main() {
 	cap.open(0);
 	Sleep(2000);
 	namedWindow("window", 1);          //create window to show image
-	BG = func.TakeVideoFrame(cap); // store raw BackGround
+	//BG = func.TakeVideoFrame(cap); // store raw BackGround
+	
+	bgSust = createBackgroundSubtractorMOG2();
 	//cvtColor(image, grayImg, CV_BGR2GRAY);  
 	// do forever
 	while (1) {
 
 		image = func.TakeVideoFrame(cap);
-		image = image - BG;
-		cvtColor(image, grayImg, CV_BGR2GRAY);  // Change to grayScale
+		//image = image - BG;
+		//bgSust->apply(image, BgSustImg);
+		bgSust->apply(image, grayImg);
+		//cvtcolor(bgsustimg, grayImg, cv_bgr2gray);  // change to grayscale
 
 
+		
+		
 
 		//thresholded images
 		ThImage100 = func.SegmentationByTH(grayImg, binaryTH1);
