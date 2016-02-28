@@ -3,6 +3,7 @@
 #include <C:\openCV3\opencv\MyBuild\install\include\opencv2\opencv.hpp>
 #include <C:\openCV3\opencv\MyBuild\install\include\opencv\highgui.h>
 
+
 using namespace cv;
 using namespace std;
 
@@ -55,8 +56,61 @@ Mat* CVFunctions::SegmentObjects(Mat Image) {
 /*
 ClosingHollowFigures: Separate connected elements into different images
 */
-Mat ClosingHollowFigures(Mat Image) {
+Mat CVFunctions::ClosingHollowFigures(Mat Image) {
 
 
 	return Image;
+}
+
+
+
+Mat CVFunctions::FilterBrightPaper(Mat Image, int GreyTH, Mat BWOutputImage) {
+
+
+	for (int i = 0; i < Image.cols; i++) {
+		for (int j = 0; j < Image.rows; j++) {
+			if (Image.at<uchar>(Point(i, j))> GreyTH)
+				BWOutputImage.at<int>(Point(i, j)) = 0;
+		}
+	}
+	return BWOutputImage;
+}
+
+
+
+/*
+Morphology Operations
+*/
+
+Mat CVFunctions::ClosingMorph(Mat Image, int radious) {
+	Mat kernel, eroded, dilatated;
+	cv::Mat element(radious, radious, CV_8U, cv::Scalar(1));
+	cv::dilate(Image, dilatated, element);
+	cv::erode(dilatated, eroded, element);
+	return eroded;
+
+}
+
+Mat CVFunctions::OpeningMorph(Mat Image, int radious) {
+	Mat kernel, eroded, dilatated;
+	cv::Mat element(radious, radious, CV_8U, cv::Scalar(1));
+	cv::erode(Image, eroded, element);
+	cv::dilate(eroded, dilatated, element);
+
+	return dilatated;
+
+}
+
+
+
+
+Mat CVFunctions::GradientMorph(Mat Image, int radious) {
+	Mat gradient, eroded, dilatated;
+	cv::Mat element(radious, radious, CV_8U, cv::Scalar(1));
+	cv::erode(Image, eroded, element);
+	cv::dilate(Image, dilatated, element);
+	gradient = dilatated - eroded;
+	
+	return gradient;
+
 }

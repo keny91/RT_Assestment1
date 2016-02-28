@@ -19,5 +19,12 @@ public:
 	Mat TakeVideoFrame(VideoCapture source);
 	Mat* SegmentObjects(Mat Image);
 	Mat ClosingHollowFigures(Mat Image);
+
+	Mat FilterBrightPaper(Mat Image, int GreyTH, Mat BWOutputImage);
+	Mat ClosingMorph(Mat Image, int radious);
+	Mat OpeningMorph(Mat Image, int radious);
+	
+	Mat GradientMorph(Mat Image, int radious);
+
 };
 

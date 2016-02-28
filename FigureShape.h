@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include "VFunctions.h"
+#include <math.h>
 
 using namespace std;
 using namespace cv;
@@ -14,22 +15,38 @@ class FigureShape
 {
 public:
 
-	string ColorLabel;
-	string ColorValue;
+	//string ColorLabel;
+	//string ColorValue;
 	int NCorners;
+	vector<Point> contours;
+
+	/*
 	int FigureMaxPixelSize;
 	int FigureMinPixelSize;
 	int FigurPixelSize;
-	
+	*/
+
+	vector<Point> contour;
+	double area;
+	double roundness;
+	double perimeter;
+	int label;
 
 	// Constructor
 	FigureShape(string ColorLa, string ColorValue, int NCorners);
 	FigureShape();
+	FigureShape(vector<Point> Contour);
 	~FigureShape();
 
+	double FindRoundness(double area, double perimeter);
+	void SetRoundness(double Value);
+	void SetArea(double Value);
+	void SetPerimeter(double Value);
+	void SetContour(vector<Point> Value);
 
 
 	void LabelUnknownFigure(Mat image);
+	void SetContour(vector<Point> contour);
 
 
 };
