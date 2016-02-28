@@ -38,7 +38,7 @@ public:
 	FigureShape(vector<Point> Contour);
 	~FigureShape();
 
-	double FindRoundness(double area, double perimeter);
+	double FindRoundness(double a, double p);
 	void SetRoundness(double Value);
 	void SetArea(double Value);
 	void SetPerimeter(double Value);
@@ -46,7 +46,7 @@ public:
 
 
 	void LabelUnknownFigure(Mat image);
-	void SetContour(vector<Point> contour);
+
 
 
 };

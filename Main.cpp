@@ -15,7 +15,6 @@ int main() {
 	Ptr<BackgroundSubtractorMOG2> bgSust;
 	VideoCapture cap;          //initialize capture
 	CVFunctions func = CVFunctions();
-	FigureShape * TheFigures = new FigureShape();
 	int binaryTH1 = 100;
 	int binaryTH2 = 50;
 
@@ -62,18 +61,44 @@ int main() {
 		double contourSize, perimeter, roundness;
 		double mincontourSize = 100;
 
+
+		//// Find and identify contours
+		//double contourSize, perimeter, roundness;
+		//double mincontourSize = 100;
+		//int index = 0;
+
+		//findContours(CannyImage, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE, Point(0, 0));
+		//for (unsigned int i = 0; i<contours.size(); i++) {
+		//	if (hierarchy[i][3] >= 0) {   //has parent, inner (hole) contour of a closed edge (looks good)
+		//		contourSize = contourArea(contours[i]);
+		//		cout << contourSize + '\n';
+		//		if (contourSize > mincontourSize) {
+
+		//			perimeter = arcLength(contours[i], true);
+		//			TheFigures[index] = FigureShape(contours[i]);
+
+		//			TheFigures[index].SetRoundness(TheFigures[index].FindRoundness(contourSize, perimeter));
+		//			TheFigures[index].SetArea(contourSize);
+		//			TheFigures[index].SetPerimeter(perimeter);
+		//			//TheFigures[index] = NewShape;
+		//			drawContours(contourImage, contours, i, Scalar(255, 0, 0), 1, 8);
+		//			index++;
+		//		}
+
+
+		//	}
+		//}
+
+
 		findContours(CannyImage, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE, Point(0, 0));
 		for (unsigned int i = 0; i<contours.size(); i++){
 			if (hierarchy[i][3] >= 0){   //has parent, inner (hole) contour of a closed edge (looks good)
 				contourSize = contourArea(contours[i]);
 				perimeter = arcLength(contours[i], true);
 				if (contourSize > mincontourSize) {
+					roundness = (perimeter * perimeter) / contourSize;
 
-					roundness = (perimeter ^ 2) / contourSize;
-					FigureShape NewShape = FigureShape(contours[i]);
-					NewShape.SetArea(contourSize);
-					NewShape.SetPerimeter(perimeter);
-					if()
+					//if()
 					drawContours(contourImage, contours, i, Scalar(255, 0, 0), 1, 8);
 				}
 					

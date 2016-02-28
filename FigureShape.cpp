@@ -26,10 +26,9 @@ FigureShape::~FigureShape()
 }
 
 
-double FigureShape::FindRoundness(double areas, double perimeters) {
-	double Round;
-	Round = ((perimeters ^ 2) / areas);
-	 return roundness
+double FigureShape::FindRoundness(double a, double p) {
+	double Round = ((p*p) / a);
+	return Round;
 }
 
 
@@ -58,6 +57,3 @@ void FigureShape::SetArea(double Value) {
 	area = Value;
 }
 
-void FigureShape::FigureShape::SetContour(vector<Point>  contour){
-	contour = contour;
-}
