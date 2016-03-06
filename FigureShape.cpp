@@ -1,5 +1,15 @@
 #include "FigureShape.h"
 
+#include <C:\openCV3\opencv\MyBuild\install\include\opencv2\opencv.hpp>
+#include <C:\openCV3\opencv\MyBuild\install\include\opencv\highgui.h>
+#include <string>
+#include <iostream>
+#include <cmath>
+#include "VFunctions.h"
+#include <math.h>
+
+using namespace std;
+using namespace cv;
 
 
 FigureShape::FigureShape(string ColorL, string ColorV, int NCorn) {

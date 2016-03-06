@@ -1,15 +1,14 @@
-﻿Build started 28/02/2016 17:43:00.
-     1>Project "C:\Users\keny\documents\visual studio 2015\Projects\RT_Assestment1\RT_Assestment1\RT_Assestment1.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\openCV3\opencv\MyBuild\install\include /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Main.cpp
-         Main.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\keny\documents\visual studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\openCV3\opencv\MyBuild\install\x64\vc14\lib opencv_core310d.lib opencv_highgui310d.lib opencv_imgproc310d.lib opencv_imgcodecs310d.lib opencv_videoio310d.lib opencv_video310d.lib opencv_calib3d310d.lib opencv_videostab310d.lib opencv_ts310d.lib opencv_features2d310d.lib opencv_superres310d.lib opencv_flann310d.lib opencv_ml310d.lib opencv_objdetect310d.lib opencv_photo310d.lib opencv_shape310d.lib opencv_stitching310d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\keny\documents\visual studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\keny\documents\visual studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.lib" /MACHINE:X64 x64\Debug\FigureShape.obj
+﻿Build started 06/03/2016 16:24:50.
+     1>Project "C:\Users\keny\Documents\Visual Studio 2015\Projects\RT_Assestment1\RT_Assestment1\RT_Assestment1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\keny\Documents\Visual Studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\openCV3\opencv\MyBuild\install\x64\vc14\lib opencv_core310d.lib opencv_highgui310d.lib opencv_imgproc310d.lib opencv_imgcodecs310d.lib opencv_videoio310d.lib opencv_video310d.lib opencv_calib3d310d.lib opencv_videostab310d.lib opencv_ts310d.lib opencv_features2d310d.lib opencv_superres310d.lib opencv_flann310d.lib opencv_ml310d.lib opencv_objdetect310d.lib opencv_photo310d.lib opencv_shape310d.lib opencv_stitching310d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\keny\Documents\Visual Studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\keny\Documents\Visual Studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.lib" /MACHINE:X64 x64\Debug\FigureShape.obj
          x64\Debug\Main.obj
+         x64\Debug\TrainingSamples.obj
          x64\Debug\VFunctions.obj
-         RT_Assestment1.vcxproj -> C:\Users\keny\documents\visual studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.exe
-     1>Done Building Project "C:\Users\keny\documents\visual studio 2015\Projects\RT_Assestment1\RT_Assestment1\RT_Assestment1.vcxproj" (Build target(s)).
+         LINK : C:\Users\keny\Documents\Visual Studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.exe not found or not built by the last incremental link; performing full link
+         RT_Assestment1.vcxproj -> C:\Users\keny\Documents\Visual Studio 2015\Projects\RT_Assestment1\x64\Debug\RT_Assestment1.exe
+     1>Done Building Project "C:\Users\keny\Documents\Visual Studio 2015\Projects\RT_Assestment1\RT_Assestment1\RT_Assestment1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.43
+Time Elapsed 00:00:00.72

@@ -18,6 +18,7 @@ public:
 	//string ColorLabel;
 	//string ColorValue;
 	int NCorners;
+	double CircleValoration, SquareValoration , TriangleValoration;
 	vector<Point> contours;
 
 	/*

@@ -24,6 +24,9 @@
     <ClCompile Include="FigureShape.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TrainingSamples.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VFunctions.h">
@@ -32,5 +35,13 @@
     <ClInclude Include="FigureShape.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TrainingSamples.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ui.mfcribbon-ms">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

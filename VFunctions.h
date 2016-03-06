@@ -4,9 +4,13 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+#include "TrainingSamples.h"
+#include "FigureShape.h"
+#include <string.h>
 
-using namespace std;
+//using namespace std;
 using namespace cv;
+
 
 class CVFunctions
 {
@@ -23,8 +27,12 @@ public:
 	Mat FilterBrightPaper(Mat Image, int GreyTH, Mat BWOutputImage);
 	Mat ClosingMorph(Mat Image, int radious);
 	Mat OpeningMorph(Mat Image, int radious);
-	
 	Mat GradientMorph(Mat Image, int radious);
 
+	double CalculateRoundness(double perimeter, double contourSize);
+	double IntervalEvaluation(double max, double min, double point, double ValorationTH);
+	//XXX GetNumberOfCorners(contour);
+	void FindHarrisCorners(Mat c);
+	void RunTest();
 };
 

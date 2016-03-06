@@ -50,6 +50,7 @@
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -154,11 +155,16 @@
   <ItemGroup>
     <ClCompile Include="FigureShape.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TrainingSamples.cpp" />
     <ClCompile Include="VFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FigureShape.h" />
+    <ClInclude Include="TrainingSamples.h" />
     <ClInclude Include="VFunctions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ui.mfcribbon-ms" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
